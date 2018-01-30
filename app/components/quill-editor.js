@@ -18,7 +18,7 @@ export default Component.extend({
   actions: {
     save() {
       const content = this.quill.getContents();
-      this.get('onSave')(content);
+      this.get('onSave')(content).then(info => console.log(info));
     },
   },
 });

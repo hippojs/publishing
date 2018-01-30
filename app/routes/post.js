@@ -9,6 +9,11 @@ export default Route.extend({
   actions: {
     save(content) {
       console.log(`press save, content: ${JSON.stringify(content)}`);
+      return this.get('store')
+        .createRecord('post', {
+          content,
+        })
+        .save();
     },
   },
 });
