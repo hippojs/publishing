@@ -15,10 +15,16 @@ export default Component.extend({
       theme: 'snow',
     });
   },
+  /**
+   * Handles autosaving the article on a debounced input poll
+   */
+  autoSaveHandler() {
+    const content = this.quill.getContents();
+    this.get('onSave')(this.model, 'content', content);
+  },
   actions: {
     save() {
-      const content = this.quill.getContents();
-      this.get('onSave')(content).then(info => console.log(info));
+      this.autoSaveHandler();
     },
   },
 });
