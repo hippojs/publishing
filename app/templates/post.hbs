@@ -1,7 +1,10 @@
 <h1>Post route</h1>
 
-{{#publishing-page as |actions|}}
+{{#publishing-page currentPost=currentPost as |actions|}}
 
-  {{quill-editor model=currentPost onSave=actions.updatePost}}
+  {{quill-editor
+    model=currentPost
+    onSave=actions.updatePost
+  }}
 {{/publishing-page}}
 

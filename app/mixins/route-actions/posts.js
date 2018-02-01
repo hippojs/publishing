@@ -8,7 +8,6 @@ export default Mixin.create({
      * @param  {string} The post content (alias: contentHtml)
      */
     updatePost(model, key, value = '') {
-      // TODO: Remove console.log
       console.log(`call from mixin model: ${model}`);
       console.log(`call from mixin model: ${value}`);
 
@@ -18,10 +17,10 @@ export default Mixin.create({
 
       model.set(key, value);
 
-      return model
-        .save()
-        .then(() => console.log('model saved'))
-        .catch(err => console.log(err));
+      // return model
+      //   .save()
+      //   .then(() => console.log('model saved'))
+      //   .catch(err => console.log(err));
     },
   },
 });
