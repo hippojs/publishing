@@ -14,7 +14,8 @@
     "build": "ember build",
     "start": "ember serve",
     "test": "ember test",
-    "prettier": "prettier --write '{package.json,{app,tests,lib}/**/*.{js,json}}'",
+    "prettier":
+      "prettier --write '{package.json,{app,tests,lib}/**/*.{js,json}}'",
     "precommit:eslint": "./scripts/precommit-eslint.sh",
     "precommit:prettier": "./scripts/precommit-prettier.sh",
     "precommit:templatelint": "./scripts/precommit-templatelint.js"

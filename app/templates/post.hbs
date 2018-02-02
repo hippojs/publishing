@@ -2,6 +2,11 @@
 
 {{#publishing-page currentPost=currentPost as |actions|}}
 
+  {{nav-bar
+    model=currentPost
+    onPublish=actions.publishPost
+  }}
+
   {{quill-editor
     model=currentPost
     onSave=actions.updatePost

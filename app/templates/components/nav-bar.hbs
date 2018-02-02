@@ -1,0 +1,30 @@
+<div class="nav-bar__row">
+  <div class="nav-bar__branding">
+    {{!-- {{#shared/external-link href=homeUrl control-name=controlUrns.LOGO target="_blank"}}
+      {{li-icon type="app-linkedin-bug-color-icon" class="li-logo" a11y-text="LinkedIn"}}
+    {{/shared/external-link}} --}}
+
+    <h2>publishing_title</h2>
+  </div>
+
+  <div class="nav-bar__actions">
+    {{!-- TODO: Implement post-status --}}
+    {{!-- {{#post-status as |message type|}}
+      <span class="post-status post-status--{{type}} {{unless message "post-status--hidden"}}">
+        {{t message}}
+      </span>
+    {{/post-status}} --}}
+
+    {{!-- TODO: Implement  dropDownItems --}}
+    {{!-- {{yield dropDownItems}} --}}
+
+    <button {{action "publish"}} class="nav-bar__action-button action-button--{{if isPublished "update" "publish"}}">
+      {{if isDisabled "update" "publish"}}
+    </button>
+  </div>
+</div>
+
+{{!-- TODO: Implement editor on the top --}}
+{{!-- {{post-toolbar width=toolbarWidth positionX=toolbarPositionX isCoverImageEnabled=isCoverImageEnabled setCoverImageEnabled=setCoverImageEnabled}} --}}
+
+{{!-- {{post-link-editor}} --}}
