@@ -1,4 +1,5 @@
 import Mixin from '@ember/object/mixin';
+import { ROUTES } from 'publishing/constants/global';
 
 export default Mixin.create({
   actions: {
@@ -16,6 +17,13 @@ export default Mixin.create({
       }
 
       model.set(key, value);
+
+      if (model.get('isNew')) {
+        return model
+          .save()
+          .then(model => this.transitionTo(ROUTES.POST_EDIT, model.get('id')))
+          .catch(err => console.log(err));
+      }
 
       // return model
       //   .save()
