@@ -1,9 +1,13 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('publishing-page', 'Integration | Component | publishing page', {
-  integration: true
-});
+moduleForComponent(
+  'publishing-page',
+  'Integration | Component | publishing page',
+  {
+    integration: true,
+  }
+);
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
@@ -11,7 +15,12 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{publishing-page}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    ''
+  );
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +29,10 @@ test('it renders', function(assert) {
     {{/publishing-page}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    'template block text'
+  );
 });

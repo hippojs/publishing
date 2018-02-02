@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('quill-editor', 'Integration | Component | quill editor', {
-  integration: true
+  integration: true,
 });
 
 test('it renders', function(assert) {
@@ -11,7 +11,12 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{quill-editor}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    ''
+  );
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +25,10 @@ test('it renders', function(assert) {
     {{/quill-editor}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    'template block text'
+  );
 });
