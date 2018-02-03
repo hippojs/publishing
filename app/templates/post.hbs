@@ -1,15 +1,20 @@
 <h1>Post route</h1>
 
-{{#publishing-page currentPost=currentPost as |actions|}}
+{{#publishing-page currentPost=currentPost as |actions properties|}}
 
   {{nav-bar
     model=currentPost
-    onPublish=actions.publishPost
+    openPublishModal=actions.openPublishModal
   }}
 
   {{quill-editor
     model=currentPost
     onSave=actions.updatePost
+  }}
+
+  {{publish-modal
+    isOpen=properties.showPublishModal
+    publishPost=actions.publishPost
   }}
 {{/publishing-page}}
 

@@ -18,7 +18,7 @@
     {{!-- TODO: Implement  dropDownItems --}}
     {{!-- {{yield dropDownItems}} --}}
 
-    <button {{action "publish"}} class="nav-bar__action-button action-button--{{if isPublished "update" "publish"}}">
+    <button {{action openPublishModal}} class="nav-bar__action-button action-button--{{if isPublished "update" "publish"}}">
       {{if isDisabled "update" "publish"}}
     </button>
   </div>
