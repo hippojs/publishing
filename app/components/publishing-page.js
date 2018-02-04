@@ -1,6 +1,9 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+  postStatus: service('post-status'),
+
   init() {
     this._super(...arguments);
     this.setProperties({
@@ -16,6 +19,9 @@ export default Component.extend({
   actions: {
     openPublishModal() {
       // TODO: validate title / content, if not ok, don't set following to true
+      // if ([not valid]) {
+      //   this.get('postStatus').setMessage('hello world');
+      // }
       this.set('showPublishModal', true);
     },
     closePublishModal() {

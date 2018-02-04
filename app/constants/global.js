@@ -6,5 +6,11 @@ export const ROUTES = {
   POST_EDIT: 'post.edit.index',
 };
 
+export const POST_STATUS_MESSAGE_TYPE = {
+  INFO: 'info',
+  SUCCESS: 'success',
+  ERROR: 'error',
+};
+
 export const POST_DRAFTS_MODAL = 'drafts';
 export const POST_PUBLISHED_MODAL = 'published';

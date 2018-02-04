@@ -8,12 +8,11 @@
   </div>
 
   <div class="nav-bar__actions">
-    {{!-- TODO: Implement post-status --}}
-    {{!-- {{#post-status as |message type|}}
+    {{#post-status as |message type|}}
       <span class="post-status post-status--{{type}} {{unless message "post-status--hidden"}}">
-        {{t message}}
+        {{message}}
       </span>
-    {{/post-status}} --}}
+    {{/post-status}}
 
     {{!-- TODO: Implement  dropDownItems --}}
     {{!-- {{yield dropDownItems}} --}}
